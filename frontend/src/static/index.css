@@ -1,0 +1,203 @@
+* {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+header {
+  background-color: #7171e2;
+}
+footer {
+  background-color: pink;
+}
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+#root main {
+  flex-grow: 1;
+}
+#root header {
+  display: flex;
+  flex-direction: column;
+}
+#root header .header-main {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+#root header .header-main .header-column-helper {
+  min-width: 475px;
+}
+#root header .header-main .header-column-helper .header-row-helper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+#root header .header-main .header-column-helper .header-row-helper .main-logo img {
+  height: 200px;
+  width: auto;
+}
+#root header .header-main .header-column-helper .header-row-helper .cart img {
+  height: 50px;
+  width: auto;
+}
+#root header .header-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+#root header .header-nav .header-column-helper {
+  min-width: 475px;
+}
+#root main {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+#root main .main-advertise a,
+#root main .main-advertise img {
+  height: 528px;
+  width: 1152px;
+}
+#root main .sales {
+  display: flex;
+  flex-direction: column;
+  align-items: unset;
+  justify-content: space-between;
+}
+#root main .sales h1 {
+  align-self: center;
+}
+#root main .sales .sales-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: unset;
+  justify-content: space-between;
+}
+#root main .sales .sales-wrapper a,
+#root main .sales .sales-wrapper img {
+  height: 270px;
+  width: 270px;
+}
+#root main .goods-catalog {
+  display: flex;
+  flex-direction: column;
+  align-items: unset;
+  justify-content: space-between;
+}
+#root main .goods-catalog .goods-categories-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: unset;
+  justify-content: space-between;
+}
+#root main .goods-catalog .goods-categories-wrapper .goods-category-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: unset;
+  justify-content: space-between;
+}
+#root main .goods-catalog .goods-categories-wrapper .goods-category-wrapper h2 {
+  align-self: center;
+}
+#root main .goods-catalog .goods-categories-wrapper .goods-category-wrapper > a,
+#root main .goods-catalog .goods-categories-wrapper .goods-category-wrapper img {
+  height: 212px;
+  width: 212px;
+}
+#root main .goods-catalog .goods-categories-wrapper .goods-category-wrapper nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+#root main .goods-catalog h1 {
+  align-self: center;
+}
+#root main .brands {
+  display: flex;
+  flex-direction: row;
+  align-items: unset;
+  justify-content: space-around;
+}
+#root main .brands a,
+#root main .brands img {
+  height: 131px;
+  width: 172px;
+}
+#root main .projects {
+  display: flex;
+  flex-direction: column;
+  align-items: unset;
+  justify-content: space-between;
+}
+#root main .projects h1 {
+  align-self: center;
+}
+#root main .projects .projects-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: unset;
+  justify-content: space-between;
+}
+#root main .projects .projects-wrapper a,
+#root main .projects .projects-wrapper img {
+  height: 205px;
+  width: auto;
+}
+#root footer .footer-top {
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  justify-content: center;
+  margin: 0;
+}
+#root footer .footer-top .follow-us {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 5px;
+}
+#root footer .footer-top .follow-us .footer-row-helper img {
+  width: 100px;
+  height: 94px;
+  object-fit: none;
+}
+#root footer .footer-top .follow-us .footer-row-helper #facebook {
+  object-position: -100px 0px;
+}
+#root footer .footer-top .follow-us .footer-row-helper #youtube {
+  object-position: -100px -94px;
+}
+#root footer .footer-top .follow-us .footer-row-helper #instagram {
+  object-position: 0px 0px;
+}
+#root footer .footer-top .navigate {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 5px;
+}
+#root footer .footer-top .navigate nav {
+  display: flex;
+  flex-direction: column;
+}
+#root footer .footer-top .subscribe {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 5px;
+}
+#root footer .footer-bottom {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+#root footer .footer-bottom div {
+  margin: 0 5px;
+}

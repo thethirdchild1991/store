@@ -1,0 +1,246 @@
+@header-background-color: rgb(113, 113, 226);
+@footer-background-color: pink;
+
+@header-col-min-width: 475px;
+@main-logo-height: 200px;
+@main-logo-width: auto;
+
+@header-cart-logo-height: 50px;
+@header-cart-logo-width: auto;
+//------------------------------------
+@main-advertise-img-width: 1152px;
+@main-advertise-img-height: 528px;
+
+@main-sales-img-height: 270px;
+@main-sales-img-width: 270px;
+
+@main-category-img-height: 212px;
+@main-category-img-width: 212px;
+
+@main-brand-img-height: 131px;
+@main-barand-img-width: 172px;
+
+@main-project-img-height: 205px;
+@main-project-img-width: auto;//564px;
+
+
+//------------------------------------
+@social-img-width: 100px;
+@social-img-height: 94px;
+
+@social-background-offset-x: -@social-img-width;
+@social-background-offset-y: -@social-img-height;
+
+@social-background-facebook-offset-x-multiply: 1;
+@social-background-facebook-offset-y-multiply: 0;
+
+@social-background-youtube-offset-x-multiply: 1;
+@social-background-youtube-offset-y-multiply: 1;
+
+@social-background-instagram-offset-x-multiply: 0;
+@social-background-instagram-offset-y-multiply: 0;
+
+
+
+.object-position( @x-offset, @y-offset, @x-multiply, @y-multiply){
+    object-position: @x-offset*@x-multiply @y-offset*@y-multiply;
+}
+
+.main-flex( @direction: row, @align : unset, @justify : space-between){
+    display: flex;
+    flex-direction: @direction;
+    align-items: @align;  
+    justify-content: @justify;    
+}
+
+.footer-flex(@direction: column, @align: center, @margin: 5px){
+    display: flex;
+    flex-direction: @direction;
+    align-items: @align;  
+    justify-content: center;
+    margin: @margin;
+}
+
+
+
+*{
+    border: 0;    
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    background-color: @header-background-color;
+}
+footer{
+    background-color: @footer-background-color;
+}
+
+#root{
+    display:  flex;
+    flex-direction: column;
+    min-height: 100vh;
+    & main{
+        flex-grow: 1;
+    }
+    header{
+        display: flex;
+        flex-direction: column;        
+        .header-main{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            .header-column-helper{
+                min-width: @header-col-min-width;
+                .header-row-helper{
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    .main-logo{
+                        img{
+                            height: @main-logo-height;
+                            width: @main-logo-width;
+                        }
+                    }
+                    .cart{
+                        img{
+                            height: @header-cart-logo-height;
+                            width: @header-cart-logo-width;
+                        }
+                    }
+                }
+            }
+        }
+        .header-nav{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;            
+            .header-column-helper{
+                min-width: @header-col-min-width;
+            }
+        }
+    }
+    main{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+
+        .main-advertise{
+            a, img{
+                height: @main-advertise-img-height;
+                width: @main-advertise-img-width;
+            }
+        }
+
+        .sales{
+            .main-flex(@direction: column);
+            h1{
+                align-self: center;
+            }
+            .sales-wrapper{
+                .main-flex();
+                a, img{
+                    height: @main-sales-img-height;
+                    width: @main-sales-img-width;
+                }
+            }
+        }
+        .goods-catalog{            
+            .main-flex(@direction : column);
+            .goods-categories-wrapper{
+                .main-flex();
+                .goods-category-wrapper{
+                    .main-flex(@direction:column);
+                    h2{
+                        align-self: center;
+                    }
+                    & > a, img{
+                        height: @main-category-img-height;
+                        width: @main-category-img-width;
+                    }
+                    nav{
+                        .main-flex(@direction : column, @align : center);                      
+                    }
+                }
+            }
+            h1{
+                align-self: center;
+            }
+            
+        }
+
+        .brands{
+            .main-flex(@justify : space-around);
+            a, img{
+                height: @main-brand-img-height;
+                width: @main-barand-img-width;
+            }
+        }
+        .projects{
+            .main-flex(@direction: column);
+            h1{
+                align-self: center;
+            }
+            .projects-wrapper{
+                .main-flex();
+                a, img{
+                    height: @main-project-img-height;
+                    width: @main-project-img-width;
+                }
+            }
+        }
+    }
+    footer{
+        .footer-top{
+            .footer-flex(row, start, 0);
+            .follow-us{                
+                .footer-flex();
+                .footer-row-helper{              
+                    img{
+                        width: @social-img-width;
+                        height: @social-img-height;
+                        object-fit: none;
+                    }
+                        #facebook{
+                            .object-position(   @social-background-offset-x, 
+                                                @social-background-offset-y, 
+                                                @social-background-facebook-offset-x-multiply, 
+                                                @social-background-facebook-offset-y-multiply)
+                        }
+                        #youtube{
+                            .object-position(   @social-background-offset-x, 
+                                                @social-background-offset-y, 
+                                                @social-background-youtube-offset-x-multiply, 
+                                                @social-background-youtube-offset-y-multiply)
+                        }
+                        #instagram{
+                            .object-position(   @social-background-offset-x, 
+                                                @social-background-offset-y, 
+                                                @social-background-instagram-offset-x-multiply, 
+                                                @social-background-instagram-offset-y-multiply)
+                        }
+                    
+                }
+            }
+            .navigate{                                
+                .footer-flex();
+                nav{
+                    display: flex;
+                    flex-direction: column;
+                }
+            }
+            .subscribe{
+                .footer-flex();
+            }
+        }
+        .footer-bottom{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            div{
+                margin: 0 5px;
+            }
+        }
+    }
+}
