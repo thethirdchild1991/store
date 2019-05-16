@@ -2,7 +2,8 @@ import React from 'react'
 import RowWithImages from './RowWithImages'
 import ColumnWithLinkedImageNColumnOfLinks from './ColumnWithLinkedImageNColumnOfLinks'
 
-function FooterElement(){
+function FooterElement( props ){
+    let {followUsData, navigateData} = props.data ? props.data : ''
     return (
         <footer>
             <div className="footer-top">  
