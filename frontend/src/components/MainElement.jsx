@@ -10,7 +10,14 @@ function MainAdvertise( props ){
     )
 }
 
-function MainElement(){
+function MainElement( props ){
+    let {
+            mainAdvertiseData, 
+            salesData, 
+            goodsCatalogData, 
+            brandsData,
+            projectsData
+        } = props.data ? props.data : ''
     return(
         <>
             <MainAdvertise data={mainAdvertiseData}/>
