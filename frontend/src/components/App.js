@@ -4,6 +4,8 @@ import Main from './MainElement'
 import Footer from './FooterElement'
 import { Route, BrowserRouter as Router, Switch } from 'react-router-dom'
 
+import "./../static/index.css";
+
 function App() {
   return (
     <Router>
