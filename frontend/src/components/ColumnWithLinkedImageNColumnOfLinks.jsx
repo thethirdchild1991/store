@@ -3,10 +3,14 @@ import LinedImage from './LinkedImage'
 import HeadedNavWithLinks from './HeadedNavWithLinks'
 
 function ColumnWithLinkedImageNColumnOfLinks( props ){
-    let { topLinkData, headedColumOfLinksData } = props.data ? props.data : ''    
+    let { wrapperClassName, topLinkData, headedColumOfLinksData } = props.data ? props.data : ''    
     return(
-        <div class="goods-category-wrapper">
-            <LinedImage data={topLinkData} />
+        <div className={wrapperClassName}>
+            {
+                topLinkData ? 
+                <LinedImage data={topLinkData} />
+                : <></>
+            }
             <HeadedNavWithLinks data={headedColumOfLinksData}/>
         </div>
     )

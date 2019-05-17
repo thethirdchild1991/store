@@ -7,7 +7,7 @@ function HeadedNavWithLinks( props ){
     let { headerText, content } = props.data ? props.data : ''
     return(
         <>            
-            { headerText ? <h2>{headerText}</h2> : <></>}
+            { headerText ? <h1>{headerText}</h1> : <></>}
             <nav>                
                 {
                     content ? 

@@ -4,6 +4,7 @@ import ColumnWithLinkedImageNColumnOfLinks from './ColumnWithLinkedImageNColumnO
 
 function FooterElement( props ){
     let {followUsData, navigateData} = props.data ? props.data : ''
+    console.log(props.data)
     return (
         <footer>
             <div className="footer-top">  

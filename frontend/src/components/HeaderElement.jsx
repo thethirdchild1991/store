@@ -8,6 +8,7 @@ function HeaderElement( props ){
             mainLinkedImageData,
             cartLinkData,
             accLinkData,
+            headedNavData
         } = props.data ? props.data : ''
     return(
         <header>
@@ -21,7 +22,7 @@ function HeaderElement( props ){
                         </div>
                         <div class="search">
                             <form action="">
-                                <input name="search-line" type="text" value="search" />
+                                <input name="search-line" type="text" value="search" /> 
                                 <input type="submit" value="search"/>
                             </form>
                         </div>
@@ -44,7 +45,7 @@ function HeaderElement( props ){
             </div>
             <div class="header-nav">  
                 <div class="header-column-helper">                    
-                    <HeadedNavWithLinks />      
+                    <HeadedNavWithLinks  data={headedNavData}/>      
                 </div>
             </div>            
 

@@ -19,13 +19,15 @@ function MainElement( props ){
             projectsData
         } = props.data ? props.data : ''
     return(
-        <>
-            <MainAdvertise data={mainAdvertiseData}/>
-            <RowWithImages data={salesData} />
-            <RowWithImages data={goodsCatalogData} />
-            <RowWithImages data={brandsData} />
-            <RowWithImages data={projectsData} />
-        </>
+        <main>
+            <div class="main-central-column">
+                <MainAdvertise data={mainAdvertiseData}/>
+                <RowWithImages data={salesData} />
+                <RowWithImages data={goodsCatalogData} />
+                <RowWithImages data={brandsData} />
+                <RowWithImages data={projectsData} />
+            </div>
+        </main>
     )
 }
 
