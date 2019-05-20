@@ -9,3 +9,36 @@ Store pages
     cart
     info
     events
+
+DB struct
+
+Schemes:
+    -Pages
+    -Catalog
+    -Goods
+    -Projects
+    -Pages content
+
+    Description
+        -Pages
+            Page Name
+            Page Link
+            Page Type
+        -Catalog tree
+            Category Name
+            Parent Category
+            Subcategories
+            Goods
+            Status (active or not)
+        -Projects
+            Name
+            Description
+            Author
+            Date
+        -Pages Content
+            type
+            content
+            pageRef
+            categoryName
+
+
